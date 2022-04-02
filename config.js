@@ -1,5 +1,5 @@
 module.exports = {
-  BOARD_URL: 'https://www.reddit.com/api/place/board-bitmap',
+  BOARD_URL: 'https://hot-potato.reddit.com/embed/',
   BOARD_FILE: __dirname + '/tmp/board.bmp',
 
   REMOTE_TARGET_URL: 'https://raw.githubusercontent.com/Zequez/reddit-placebot/master/images/target.png',
@@ -15,13 +15,13 @@ module.exports = {
 
   // Wait until these amount of accounts are available
   // and paint pixels at the same time
-  bundleAccounts: 10,
+  bundleAccounts: 4,
 
   // The PLACEBOT mark in the world <3
-  targetStartX: 981,
-  targetStartY: 784,
+  targetStartX: 110,
+  targetStartY: 870,
 
-  drawMode: 'RANDOM', // LEFTTOP | RANDOM
+  drawMode: 'LEFTTOP', // LEFTTOP | RANDOM
 
   // Testing configuration things
 

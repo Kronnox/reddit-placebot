@@ -6,6 +6,7 @@ const config = require('../config')
 const colors = require('./colors')
 
 function load () {
+  console.log("Loading board")
   if (config.useExistingBoardCache) {
     return loadFromFile(config.BOARD_FILE)
   } else {
@@ -45,6 +46,9 @@ function saveAsBmp (buffer, targetFile) {
 
       color1 = colors.byInt[color1]
       color2 = colors.byInt[color2]
+
+      if (color1 === undefined) color1 = colors.byInt[0];
+      if (color2 === undefined) color2 = colors.byInt[0];
 
       img.setPixelColor(color1, x * 2,     y)
       img.setPixelColor(color2, x * 2 + 1, y)
