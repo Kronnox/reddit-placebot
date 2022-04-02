@@ -5,7 +5,7 @@ const users = require('../users')
 
 function auth (user) {
   let passwd = users[user]
-
+  console.log(passwd)
   console.log('Getting modhash and cookies for ', user)
 
   return axios.post('https://www.reddit.com/api/login/' + user, qs.stringify({
@@ -28,8 +28,6 @@ function auth (user) {
         console.log(response.data.json)
       }
     }
-  }).catch(() => {
-    console.log("something went wrong")
   })
 }
 
