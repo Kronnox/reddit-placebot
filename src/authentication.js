@@ -28,6 +28,8 @@ function auth (user) {
         console.log(response.data.json)
       }
     }
+  }).catch(() => {
+    console.log("something went wrong")
   })
 }
 
